@@ -24,3 +24,60 @@ for (let i = 0; i < images.length; i++) {
    sliderElementImg.insertAdjacentHTML('beforeend', imageEl);
 }
 
+// seleziono i bottoni
+const nextEl = document.getElementById('next');
+nextEl.addEventListener('click', function () {
+   console.log('clicked');
+
+   // seleziono le slide
+   const slideImagesElements = document.querySelectorAll('.slider > .images > img')
+
+   // seleziono la slide attuale
+   const currentSlide = slideImagesElements[activeImg];
+
+   // rimuovo la classe active 
+   currentSlide.classList.remove('active');
+
+   // incremento la variabile dell'img active
+   activeImg++;
+
+   // verifica per il tato next per lo scroll infinito
+   if (activeImg == images.length) {
+      activeImg = 0;
+   }
+
+   //seleziono la prossima slide 
+   const nextImage = slideImagesElements[activeImg];
+
+   // applico la classe active
+   nextImage.classList.add('active');
+})
+
+const prevEl = document.getElementById('prev');
+prevEl.addEventListener('click', function () {
+   console.log('clicked');
+
+   // seleziono le slide
+   const slideImagesElements = document.querySelectorAll('.slider > .images > img')
+
+   // seleziono la slide attuale
+   const currentSlide = slideImagesElements[activeImg];
+
+   // rimuovo la classe active 
+   currentSlide.classList.remove('active');
+
+   // incremento la variabile dell'img active
+   activeImg--;
+
+   // verifica per il tato prev per lo scroll infinito
+   if (activeImg == -1) {
+      activeImg = images.length - 1;
+   }
+
+   //seleziono la prossima slide 
+   const prevImage = slideImagesElements[activeImg];
+
+   // applico la classe active
+   prevImage.classList.add('active');
+
+})

@@ -1,5 +1,7 @@
 #app_main {
    height: 100vh;
+   background-image: url('https://wallpapers.com/images/hd/ppt-background-zdyi9yr4xypdgh07.jpg');
+   background-size: cover;
 }
 
 .images img:not(.active) {
@@ -7,12 +9,14 @@
 }
 
 .up {
-   top: 5%;
+   top: 3%;
    left: 50%;
+   transform: translate(-50% , -0);
 }
 
 .down {
-   bottom: 5%;
+   bottom: 3%;
    left: 50%;
+   transform: translate(-50% , -0);
 }
 
