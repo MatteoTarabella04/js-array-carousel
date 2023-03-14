@@ -1,0 +1,18 @@
+#app_main {
+   height: 100vh;
+}
+
+.images img:not(.active) {
+   display: none;
+}
+
+.up {
+   top: 5%;
+   left: 50%;
+}
+
+.down {
+   bottom: 5%;
+   left: 50%;
+}
+
